@@ -1,13 +1,14 @@
+#include <string>
+
 class Solution {
 public:
-    char findTheDifference(string s, string t) {
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-        for(int i = 0; i < t.size(); i++){
-            if(s[i] != t[i]){
-                return t[i];
-            }
-        }
-        return 0;
+    char findTheDifference(std::string s, std::string t) {
+        char result = 0;
+        
+        // XOR all characters in s and t
+        for (char c : s) result ^= c;
+        for (char c : t) result ^= c;
+        
+        return result;
     }
 };
