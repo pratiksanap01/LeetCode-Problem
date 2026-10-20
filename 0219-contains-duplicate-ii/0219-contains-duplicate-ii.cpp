@@ -7,14 +7,10 @@ public:
            if(seen.find(nums[i]) != seen.end()){
             if(i - seen[nums[i]] <= k){
                 return true;
-            } else {
-                seen[nums[i]] = i;
-            }
-           } else{
-            seen[nums[i]] = i;
+            } 
            }
+            seen[nums[i]] = i;
         }
-
         return false;
     }
 };
