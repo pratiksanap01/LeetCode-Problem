@@ -9,7 +9,8 @@ public:
                 if(mapST[s[i]] != t[i]){
                     return false;
                 }
-            } else if(mapTS.find(t[i]) != mapTS.end()){
+            }
+            if(mapTS.find(t[i]) != mapTS.end()){
                 if(mapTS[t[i]] != s[i]){
                     return false;
                 }
