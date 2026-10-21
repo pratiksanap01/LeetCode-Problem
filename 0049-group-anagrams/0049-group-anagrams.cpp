@@ -16,7 +16,7 @@ public:
         vector<vector<string>> result;
 
         // 3. Push every map value into result
-        for(auto entry : groups){
+        for(const auto& entry : groups){
             result.push_back(entry.second);
         }
 
